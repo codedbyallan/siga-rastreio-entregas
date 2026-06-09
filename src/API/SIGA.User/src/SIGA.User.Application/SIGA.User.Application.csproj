@@ -1,0 +1,25 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net10.0</TargetFramework>
+		<Nullable>enable</Nullable>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<InvariantGlobalization>true</InvariantGlobalization>
+		<GenerateDocumentationFile>true</GenerateDocumentationFile>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="BCrypt.Net-Next" Version="4.1.0" />
+		<PackageReference Include="Microsoft.Extensions.Configuration" Version="10.0.5" />
+		<PackageReference Include="Microsoft.Extensions.Options" Version="10.0.5" />
+		<PackageReference Include="Microsoft.IdentityModel.Tokens" Version="8.17.0" />
+		<PackageReference Include="Refit" Version="10.1.6" />
+		<PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="8.2.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\SIGA.User.Infra.Data\SIGA.User.Infra.Data.csproj" />
+		<ProjectReference Include="..\SIGA.User.Domain\SIGA.User.Domain.csproj" />
+	</ItemGroup>
+
+</Project>

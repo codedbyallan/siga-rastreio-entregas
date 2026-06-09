@@ -1,0 +1,93 @@
+version: '3.8'
+
+services:
+  siga-user:
+    build:
+      context: SIGA.User
+      dockerfile: Dockerfile
+    container_name: siga-user-api
+    ports:
+      - "5001:5001"
+    environment:
+      ASPNETCORE_ENVIRONMENT: ${ASPNETCORE_ENVIRONMENT:-Development}
+      ASPNETCORE_URLS: http://+:5001
+      MONGODB_HOST: ${MONGODB_HOST}
+      MONGODB_USERNAME: ${MONGODB_USERNAME}
+      MONGODB_PASSWORD: ${MONGODB_PASSWORD}
+      MONGODB_DATABASE_USER: ${MONGODB_DATABASE_USER:-siga_user}
+      JWT_SECRET: ${JWT_SECRET}
+      INTERNAL_API_KEY: ${INTERNAL_API_KEY}
+    networks:
+      - siga-network
+    restart: unless-stopped
+
+  siga-order:
+    build:
+      context: SIGA.Order
+      dockerfile: devops/Dockerfile
+    container_name: siga-order-api
+    ports:
+      - "5002:5002"
+    environment:
+      ASPNETCORE_ENVIRONMENT: ${ASPNETCORE_ENVIRONMENT:-Development}
+      ASPNETCORE_URLS: http://+:5002
+      MONGODB_HOST: ${MONGODB_HOST}
+      MONGODB_USERNAME: ${MONGODB_USERNAME}
+      MONGODB_PASSWORD: ${MONGODB_PASSWORD}
+      MONGODB_DATABASE_ORDER: ${MONGODB_DATABASE_ORDER:-siga_order}
+      JWT_SECRET: ${JWT_SECRET}
+      INTERNAL_API_KEY: ${INTERNAL_API_KEY}
+    networks:
+      - siga-network
+    restart: unless-stopped
+
+  siga-delivery:
+    build:
+      context: SIGA.Delivery
+      dockerfile: devops/Dockerfile
+    container_name: siga-delivery-api
+    ports:
+      - "5003:5003"
+    environment:
+      ASPNETCORE_ENVIRONMENT: ${ASPNETCORE_ENVIRONMENT:-Development}
+      ASPNETCORE_URLS: http://+:5003
+      MONGODB_HOST: ${MONGODB_HOST}
+      MONGODB_USERNAME: ${MONGODB_USERNAME}
+      MONGODB_PASSWORD: ${MONGODB_PASSWORD}
+      MONGODB_DATABASE_DELIVERY: ${MONGODB_DATABASE_DELIVERY:-siga_delivery}
+      ORDER_API_BASE_URL: ${ORDER_API_BASE_URL:-http://siga-order:5002}
+      USER_API_BASE_URL: ${USER_API_BASE_URL:-http://siga-user:5001}
+      JWT_SECRET: ${JWT_SECRET}
+      INTERNAL_API_KEY: ${INTERNAL_API_KEY}
+    depends_on:
+      - siga-order
+      - siga-user
+    networks:
+      - siga-network
+    restart: unless-stopped
+
+  siga-gateway:
+    build:
+      context: SIGA.Gateway
+      dockerfile: devops/Dockerfile
+    container_name: siga-gateway-api
+    ports:
+      - "5000:5000"
+    environment:
+      ASPNETCORE_ENVIRONMENT: ${ASPNETCORE_ENVIRONMENT:-Development}
+      ASPNETCORE_URLS: http://+:5000
+      ServiceUrls__UserService: http://siga-user:5001
+      ServiceUrls__OrderService: http://siga-order:5002
+      ServiceUrls__DeliveryService: http://siga-delivery:5003
+      JWT_SECRET: ${JWT_SECRET}
+    depends_on:
+      - siga-user
+      - siga-order
+      - siga-delivery
+    networks:
+      - siga-network
+    restart: unless-stopped
+
+networks:
+  siga-network:
+    driver: bridge

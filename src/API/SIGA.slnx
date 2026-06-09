@@ -1,0 +1,34 @@
+<Solution>
+  <Folder Name="/00-Gateway/">
+    <Project Path="SIGA.Gateway/src/SIGA.Gateway.API/SIGA.Gateway.API.csproj" />
+    <Project Path="SIGA.Gateway/src/SIGA.Gateway.Application/SIGA.Gateway.Application.csproj" />
+    <Project Path="SIGA.Gateway/src/SIGA.Gateway.Domain/SIGA.Gateway.Domain.csproj" />
+    <Project Path="SIGA.Gateway/src/Siga.Gateway.Infra.Data/SIGA.Gateway.Infra.Data.csproj" />
+    <Project Path="SIGA.Gateway/src/Siga.Gateway.Infra.IoC/SIGA.Gateway.Infra.IoC.csproj" />
+  </Folder>
+
+  <Folder Name="/01-Delivery/">
+    <Project Path="SIGA.Delivery/src/SIGA.Delivery.API/SIGA.Delivery.Api.csproj" />
+    <Project Path="SIGA.Delivery/src/SIGA.Delivery.Application/SIGA.Delivery.Application.csproj" />
+    <Project Path="SIGA.Delivery/src/SIGA.Delivery.Domain/SIGA.Delivery.Domain.csproj" />
+    <Project Path="SIGA.Delivery/src/SIGA.Delivery.Infra.Data/SIGA.Delivery.Infra.Data.csproj" />
+    <Project Path="SIGA.Delivery/src/SIGA.Delivery.Infra.IoC/SIGA.Delivery.Infra.IoC.csproj" />
+  </Folder>
+
+  <Folder Name="/02-Order/">
+    <Project Path="SIGA.Order/src/SIGA.Order.API/SIGA.Order.API.csproj" />
+    <Project Path="SIGA.Order/src/SIGA.Order.Application/SIGA.Order.Application.csproj" />
+    <Project Path="SIGA.Order/src/SIGA.Order.Domain/SIGA.Order.Domain.csproj" />
+    <Project Path="SIGA.Order/src/SIGA.Order.Infra.Data/SIGA.Order.Infra.Data.csproj" />
+    <Project Path="SIGA.Order/src/SIGA.Order.Infra.IoC/SIGA.Order.Infra.IoC.csproj" />
+  </Folder>
+
+  <Folder Name="/03-User/">
+    <Project Path="SIGA.User/src/SIGA.User.API/SIGA.User.API.csproj" />
+    <Project Path="SIGA.User/src/SIGA.User.Application/SIGA.User.Application.csproj" />
+    <Project Path="SIGA.User/src/SIGA.User.Domain/SIGA.User.Domain.csproj" />
+    <Project Path="SIGA.User/src/SIGA.User.Infra.Data/SIGA.User.Infra.Data.csproj" />
+    <Project Path="SIGA.User/src/SIGA.User.Infra.IoC/SIGA.User.Infra.IoC.csproj" />
+    <Project Path="SIGA.User/src/Siga.User.Tests/SIGA.User.Tests.csproj" />
+  </Folder>
+</Solution>

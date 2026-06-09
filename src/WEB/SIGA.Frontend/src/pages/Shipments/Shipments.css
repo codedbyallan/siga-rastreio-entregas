@@ -1,0 +1,314 @@
+.shipments-page {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.shipments-title-row {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 18px;
+}
+
+.shipments-subtitle {
+    color: #163f6e;
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.shipments-title-row h1 {
+    margin: 8px 0 0;
+    color: #111827;
+    font-size: 34px;
+}
+
+.shipments-title-row p {
+    margin: 8px 0 0;
+    color: #64748b;
+    font-size: 15px;
+}
+
+.shipments-primary-button {
+    border: none;
+    border-radius: 12px;
+    padding: 13px 18px;
+    background: #1f7fd3;
+    color: #ffffff;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+.shipments-primary-button:hover {
+    background: #1668af;
+}
+
+.shipments-filters {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 240px;
+    gap: 16px;
+    padding: 20px;
+    border: 1px solid #d7dee8;
+    border-radius: 18px;
+    background: #ffffff;
+    box-shadow: 0 10px 24px rgba(15, 23, 42, 0.06);
+}
+
+.shipments-filters label {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.shipments-filters span {
+    color: #263445;
+    font-size: 14px;
+    font-weight: 800;
+}
+
+.shipments-filters input,
+.shipments-filters select {
+    height: 44px;
+    border: 1px solid #c5ced8;
+    border-radius: 10px;
+    padding: 0 12px;
+    background: #ffffff;
+    color: #172033;
+    font-size: 14px;
+    outline: none;
+}
+
+.shipments-filters input:focus,
+.shipments-filters select:focus {
+    border-color: #1f7fd3;
+    box-shadow: 0 0 0 4px rgba(31, 127, 211, 0.12);
+}
+
+.shipments-alert,
+.shipments-loading,
+.shipments-empty {
+    padding: 16px;
+    border-radius: 14px;
+    background: #ffffff;
+    border: 1px solid #d7dee8;
+    color: #526070;
+    font-weight: 700;
+}
+
+.shipments-alert {
+    color: #c2410c;
+    background: #fff7ed;
+    border-color: #fed7aa;
+}
+
+.shipments-panel {
+    background: #ffffff;
+    border: 1px solid #d7dee8;
+    border-radius: 18px;
+    box-shadow: 0 10px 24px rgba(15, 23, 42, 0.06);
+    overflow: hidden;
+}
+
+.shipments-panel-header {
+    padding: 22px 24px;
+    border-bottom: 1px solid #edf2f7;
+}
+
+.shipments-panel-header h2 {
+    margin: 0;
+    color: #111827;
+    font-size: 22px;
+}
+
+.shipments-panel-header p {
+    margin: 6px 0 0;
+    color: #64748b;
+    font-size: 14px;
+}
+
+.shipments-table {
+    width: 100%;
+}
+
+.shipments-table-head,
+.shipments-table-row {
+    display: grid;
+    grid-template-columns: 1.25fr 1fr 140px 150px 120px 150px 110px;
+    gap: 14px;
+    align-items: center;
+    padding: 16px 24px;
+}
+
+.shipments-table-head {
+    background: #f8fafc;
+    color: #526070;
+    font-size: 13px;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.shipments-table-row {
+    border-top: 1px solid #edf2f7;
+    color: #172033;
+    font-size: 14px;
+}
+
+.shipments-table-row strong {
+    font-size: 14px;
+}
+
+.shipments-order-id {
+    color: #64748b;
+    font-size: 13px;
+    word-break: break-all;
+}
+
+.shipments-status-badge {
+    width: fit-content;
+    border-radius: 999px;
+    padding: 7px 12px;
+    background: #e0f2fe;
+    color: #075985;
+    font-weight: 800;
+}
+
+.shipments-details-button {
+    border: 1px solid #cbd5e1;
+    border-radius: 10px;
+    padding: 9px 12px;
+    background: #f8fafc;
+    color: #475569;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.shipments-details-button:hover {
+    border-color: #1f7fd3;
+    background: #ffffff;
+    color: #163f6e;
+    box-shadow: 0 8px 18px rgba(15, 23, 42, 0.08);
+    transform: translateY(-1px);
+}
+
+@media (max-width: 1180px) {
+    .shipments-table-head {
+        display: none;
+    }
+
+    .shipments-table-row {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .shipments-table-row button {
+        width: fit-content;
+    }
+}
+
+@media (max-width: 720px) {
+    .shipments-title-row {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .shipments-primary-button {
+        width: 100%;
+    }
+
+    .shipments-filters {
+        grid-template-columns: 1fr;
+    }
+}
+
+.shipments-summary-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.shipments-summary-card {
+    border: 1px solid #d7dee8;
+    border-radius: 18px;
+    padding: 20px;
+    background: #ffffff;
+    color: #172033;
+    text-align: left;
+    cursor: pointer;
+    box-shadow: 0 10px 24px rgba(15, 23, 42, 0.06);
+    transition: 0.2s;
+}
+
+.shipments-summary-card:hover,
+.shipments-summary-card.active {
+    border-color: #1f7fd3;
+    transform: translateY(-1px);
+    box-shadow: 0 12px 28px rgba(15, 23, 42, 0.1);
+}
+
+.shipments-summary-card.warning {
+    border-color: #fed7aa;
+    background: #fff7ed;
+}
+
+.shipments-summary-card.warning.active,
+.shipments-summary-card.warning:hover {
+    border-color: #f97316;
+}
+
+.shipments-summary-card span {
+    display: block;
+    color: #526070;
+    font-size: 14px;
+    font-weight: 800;
+}
+
+.shipments-summary-card strong {
+    display: block;
+    margin-top: 10px;
+    color: #111827;
+    font-size: 34px;
+    font-weight: 800;
+}
+
+.shipments-summary-card small {
+    display: block;
+    margin-top: 8px;
+    color: #64748b;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.shipments-warning-box {
+    padding: 16px;
+    border-radius: 14px;
+    background: #fff7ed;
+    border: 1px solid #fed7aa;
+    color: #9a3412;
+    font-weight: 700;
+}
+
+.shipments-courier-badge {
+    width: fit-content;
+    border-radius: 999px;
+    padding: 7px 12px;
+    font-weight: 800;
+}
+
+.shipments-courier-badge.assigned {
+    background: #dcfce7;
+    color: #166534;
+}
+
+.shipments-courier-badge.unassigned {
+    background: #ffedd5;
+    color: #9a3412;
+}
+
+@media (max-width: 900px) {
+    .shipments-summary-grid {
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,0 +1,18 @@
+<Solution>
+  <Project Path="src/SIGA.Order.API/SIGA.Order.API.csproj" DisplayName="SIGA.Order.Api">
+    <BuildDependency Project="src/SIGA.Order.Domain/SIGA.Order.Domain.csproj" />
+    <BuildDependency Project="src/SIGA.Order.Infra.IoC/SIGA.Order.Infra.IoC.csproj" />
+  </Project>
+  <Project Path="src/SIGA.Order.Application/SIGA.Order.Application.csproj">
+    <BuildDependency Project="src/SIGA.Order.Domain/SIGA.Order.Domain.csproj" />
+  </Project>
+  <Project Path="src/SIGA.Order.Domain/SIGA.Order.Domain.csproj" />
+  <Project Path="src/SIGA.Order.Infra.Data/SIGA.Order.Infra.Data.csproj">
+    <BuildDependency Project="src/SIGA.Order.Domain/SIGA.Order.Domain.csproj" />
+  </Project>
+  <Project Path="src/SIGA.Order.Infra.IoC/SIGA.Order.Infra.IoC.csproj">
+    <BuildDependency Project="src/SIGA.Order.Application/SIGA.Order.Application.csproj" />
+    <BuildDependency Project="src/SIGA.Order.Domain/SIGA.Order.Domain.csproj" />
+    <BuildDependency Project="src/SIGA.Order.Infra.Data/SIGA.Order.Infra.Data.csproj" />
+  </Project>
+</Solution>

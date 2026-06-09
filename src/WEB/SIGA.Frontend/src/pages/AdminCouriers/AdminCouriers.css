@@ -1,0 +1,250 @@
+.admin-couriers-page {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.admin-couriers-title-row {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 18px;
+}
+
+.admin-couriers-subtitle {
+    color: #163f6e;
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.admin-couriers-title-row h1 {
+    margin: 8px 0 0;
+    color: #111827;
+    font-size: 34px;
+}
+
+.admin-couriers-title-row p {
+    margin: 8px 0 0;
+    color: #64748b;
+    font-size: 15px;
+}
+
+.admin-couriers-alert,
+.admin-couriers-success,
+.admin-couriers-loading,
+.admin-couriers-empty {
+    padding: 16px;
+    border-radius: 14px;
+    background: #ffffff;
+    border: 1px solid #d7dee8;
+    color: #526070;
+    font-weight: 700;
+}
+
+.admin-couriers-alert {
+    color: #c2410c;
+    background: #fff7ed;
+    border-color: #fed7aa;
+}
+
+.admin-couriers-success {
+    color: #047857;
+    background: #ecfdf5;
+    border-color: #a7f3d0;
+}
+
+.admin-couriers-panel {
+    padding: 24px;
+    background: #ffffff;
+    border: 1px solid #d7dee8;
+    border-radius: 18px;
+    box-shadow: 0 10px 24px rgba(15, 23, 42, 0.06);
+}
+
+.admin-couriers-panel-header {
+    margin-bottom: 18px;
+    display: flex;
+    justify-content: space-between;
+    gap: 14px;
+    align-items: flex-start;
+}
+
+.admin-couriers-panel h2 {
+    margin: 0;
+    color: #111827;
+    font-size: 22px;
+}
+
+.admin-couriers-panel p {
+    margin: 6px 0 0;
+    color: #64748b;
+    font-size: 14px;
+}
+
+.admin-couriers-company-selector {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(280px, 420px);
+    gap: 16px;
+    align-items: end;
+}
+
+.admin-couriers-company-selector label,
+.admin-couriers-form label,
+.admin-couriers-filters label {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.admin-couriers-company-selector span,
+.admin-couriers-form span,
+.admin-couriers-filters span {
+    color: #263445;
+    font-size: 14px;
+    font-weight: 800;
+}
+
+.admin-couriers-company-selector select,
+.admin-couriers-form input,
+.admin-couriers-filters input {
+    width: 100%;
+    height: 46px;
+    border: 1px solid #c5ced8;
+    border-radius: 10px;
+    padding: 0 12px;
+    background: #ffffff;
+    color: #172033;
+    font-size: 14px;
+    outline: none;
+}
+
+.admin-couriers-company-selector select:focus,
+.admin-couriers-form input:focus,
+.admin-couriers-filters input:focus {
+    border-color: #1f7fd3;
+    box-shadow: 0 0 0 4px rgba(31, 127, 211, 0.12);
+}
+
+.admin-couriers-company-card {
+    padding: 16px;
+    border: 1px solid #e2e8f0;
+    border-radius: 14px;
+    background: #f8fafc;
+}
+
+.admin-couriers-company-card strong {
+    display: block;
+    color: #172033;
+    font-size: 16px;
+}
+
+.admin-couriers-company-card span {
+    display: block;
+    margin-top: 4px;
+    color: #64748b;
+    font-size: 13px;
+}
+
+.admin-couriers-form {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.admin-couriers-form button {
+    align-self: end;
+    height: 46px;
+    border: none;
+    border-radius: 10px;
+    padding: 0 16px;
+    background: #1f7fd3;
+    color: #ffffff;
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.admin-couriers-form button:hover:not(:disabled) {
+    background: #1668af;
+}
+
+.admin-couriers-form button:disabled {
+    opacity: 0.65;
+    cursor: not-allowed;
+}
+
+.admin-couriers-filters {
+    margin-bottom: 18px;
+}
+
+.admin-couriers-table {
+    border: 1px solid #edf2f7;
+    border-radius: 14px;
+    overflow: hidden;
+}
+
+.admin-couriers-table-head,
+.admin-couriers-table-row {
+    display: grid;
+    grid-template-columns: 1.1fr 1.3fr 150px 130px 1.2fr;
+    gap: 14px;
+    align-items: center;
+    padding: 16px 18px;
+}
+
+.admin-couriers-table-head {
+    background: #f8fafc;
+    color: #526070;
+    font-size: 13px;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.admin-couriers-table-row {
+    border-top: 1px solid #edf2f7;
+    color: #172033;
+    font-size: 14px;
+}
+
+.admin-couriers-table-row strong {
+    color: #172033;
+}
+
+.admin-couriers-role-badge {
+    width: fit-content;
+    border-radius: 999px;
+    padding: 7px 12px;
+    background: #e0f2fe;
+    color: #075985;
+    font-weight: 800;
+}
+
+.admin-couriers-company-id {
+    color: #64748b;
+    font-size: 13px;
+    word-break: break-all;
+}
+
+@media (max-width: 1180px) {
+    .admin-couriers-company-selector,
+    .admin-couriers-form {
+        grid-template-columns: 1fr;
+    }
+
+    .admin-couriers-table-head {
+        display: none;
+    }
+
+    .admin-couriers-table-row {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 720px) {
+    .admin-couriers-title-row {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}

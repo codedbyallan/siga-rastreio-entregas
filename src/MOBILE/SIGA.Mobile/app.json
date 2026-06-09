@@ -1,0 +1,38 @@
+{
+  "expo": {
+    "name": "SIGA Mobile",
+    "slug": "siga-mobile",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "newArchEnabled": true,
+    "scheme": "siga-mobile",
+    "icon": "./assets/icon.png",
+    "splash": {
+      "image": "./assets/splash-icon.png",
+      "backgroundColor": "#0f2f52",
+      "resizeMode": "contain"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.siga.mobile"
+    },
+    "android": {
+      "package": "com.siga.mobile",
+      "edgeToEdgeEnabled": true,
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#0f2f52"
+      }
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "projectName": "SIGA Mobile",
+      "eas": {
+        "projectId": "c85fc168-188f-40b7-ac65-517640dfb66a"
+      }
+    }
+  }
+}

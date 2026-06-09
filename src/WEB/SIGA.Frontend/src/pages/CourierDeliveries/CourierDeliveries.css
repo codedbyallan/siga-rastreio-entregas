@@ -1,0 +1,206 @@
+.courier-deliveries-page {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.courier-deliveries-title-row {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 18px;
+}
+
+.courier-deliveries-subtitle {
+    color: #163f6e;
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.courier-deliveries-title-row h1 {
+    margin: 8px 0 0;
+    color: #111827;
+    font-size: 34px;
+}
+
+.courier-deliveries-title-row p {
+    margin: 8px 0 0;
+    color: #64748b;
+    font-size: 15px;
+}
+
+.courier-deliveries-filters {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 240px;
+    gap: 16px;
+    padding: 20px;
+    border: 1px solid #d7dee8;
+    border-radius: 18px;
+    background: #ffffff;
+    box-shadow: 0 10px 24px rgba(15, 23, 42, 0.06);
+}
+
+.courier-deliveries-filters label {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.courier-deliveries-filters span {
+    color: #263445;
+    font-size: 14px;
+    font-weight: 800;
+}
+
+.courier-deliveries-filters input,
+.courier-deliveries-filters select {
+    height: 44px;
+    border: 1px solid #c5ced8;
+    border-radius: 10px;
+    padding: 0 12px;
+    background: #ffffff;
+    color: #172033;
+    font-size: 14px;
+    outline: none;
+}
+
+.courier-deliveries-filters input:focus,
+.courier-deliveries-filters select:focus {
+    border-color: #1f7fd3;
+    box-shadow: 0 0 0 4px rgba(31, 127, 211, 0.12);
+}
+
+.courier-deliveries-alert,
+.courier-deliveries-loading,
+.courier-deliveries-empty {
+    padding: 16px;
+    border-radius: 14px;
+    background: #ffffff;
+    border: 1px solid #d7dee8;
+    color: #526070;
+    font-weight: 700;
+}
+
+.courier-deliveries-alert {
+    color: #c2410c;
+    background: #fff7ed;
+    border-color: #fed7aa;
+}
+
+.courier-deliveries-panel {
+    background: #ffffff;
+    border: 1px solid #d7dee8;
+    border-radius: 18px;
+    box-shadow: 0 10px 24px rgba(15, 23, 42, 0.06);
+    overflow: hidden;
+}
+
+.courier-deliveries-panel-header {
+    padding: 22px 24px;
+    border-bottom: 1px solid #edf2f7;
+}
+
+.courier-deliveries-panel-header h2 {
+    margin: 0;
+    color: #111827;
+    font-size: 22px;
+}
+
+.courier-deliveries-panel-header p {
+    margin: 6px 0 0;
+    color: #64748b;
+    font-size: 14px;
+}
+
+.courier-deliveries-table {
+    width: 100%;
+}
+
+.courier-deliveries-table-head,
+.courier-deliveries-table-row {
+    display: grid;
+    grid-template-columns: 1fr 1.25fr 1.6fr 150px 150px 110px;
+    gap: 14px;
+    align-items: center;
+    padding: 16px 24px;
+}
+
+.courier-deliveries-table-head {
+    background: #f8fafc;
+    color: #526070;
+    font-size: 13px;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.courier-deliveries-table-row {
+    border-top: 1px solid #edf2f7;
+    color: #172033;
+    font-size: 14px;
+}
+
+.courier-deliveries-table-row strong {
+    font-size: 14px;
+}
+
+.courier-deliveries-order-id {
+    color: #64748b;
+    font-size: 13px;
+    word-break: break-all;
+}
+
+.courier-deliveries-status-badge {
+    width: fit-content;
+    border-radius: 999px;
+    padding: 7px 12px;
+    background: #e0f2fe;
+    color: #075985;
+    font-weight: 800;
+}
+
+.courier-deliveries-details-button {
+    border: 1px solid #cbd5e1;
+    border-radius: 10px;
+    padding: 9px 12px;
+    background: #f8fafc;
+    color: #475569;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.courier-deliveries-details-button:hover {
+    border-color: #1f7fd3;
+    background: #ffffff;
+    color: #163f6e;
+    box-shadow: 0 8px 18px rgba(15, 23, 42, 0.08);
+    transform: translateY(-1px);
+}
+
+@media (max-width: 1180px) {
+    .courier-deliveries-table-head {
+        display: none;
+    }
+
+    .courier-deliveries-table-row {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .courier-deliveries-table-row button {
+        width: fit-content;
+    }
+}
+
+@media (max-width: 720px) {
+    .courier-deliveries-title-row {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .courier-deliveries-filters {
+        grid-template-columns: 1fr;
+    }
+}

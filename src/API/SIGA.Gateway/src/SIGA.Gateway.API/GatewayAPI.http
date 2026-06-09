@@ -1,0 +1,177 @@
+### SIGA Gateway API - Testing Guide
+
+## Base URL
+@baseUrl = https://localhost:5000
+@contentType = application/json
+
+## ====== HEALTH CHECK ======
+
+### Check Overall Gateway Health
+GET {{baseUrl}}/api/health
+
+### Check User Service Health
+GET {{baseUrl}}/api/health/UserService
+
+### Check Order Service Health
+GET {{baseUrl}}/api/health/OrderService
+
+### Check Delivery Service Health
+GET {{baseUrl}}/api/health/DeliveryService
+
+## ====== USERS ======
+
+### Get All Users
+GET {{baseUrl}}/api/users
+
+### Get User by ID
+GET {{baseUrl}}/api/users/65f7e1bbf9b2a4f1a9c38b9a1
+
+### Get User by Email
+GET {{baseUrl}}/api/users/email/joao.silva@email.com
+
+### Create User
+POST {{baseUrl}}/api/users
+Content-Type: {{contentType}}
+
+{
+  "name": "João Silva",
+  "email": "joao.silva@email.com",
+  "phone": "31999999999",
+  "role": "customer"
+}
+
+### Update User
+PUT {{baseUrl}}/api/users/65f7e1bbf9b2a4f1a9c38b9a1
+Content-Type: {{contentType}}
+
+{
+  "name": "João Silva Atualizado",
+  "email": "joao.silva@email.com",
+  "phone": "31999999999",
+  "role": "customer"
+}
+
+### Delete User
+DELETE {{baseUrl}}/api/users/65f7e1bbf9b2a4f1a9c38b9a1
+
+## ====== ORDERS ======
+
+### Get All Orders
+GET {{baseUrl}}/api/orders
+
+### Get Order by ID
+GET {{baseUrl}}/api/orders/65f7e1bbf9b2a4f1a9c38b9a3
+
+### Create Order
+POST {{baseUrl}}/api/orders
+Content-Type: {{contentType}}
+
+{
+  "companyId": "65f7e1bbf9b2a4f1a9c38b9a2",
+  "customerId": "65f7e1bbf9b2a4f1a9c38b9a1",
+  "items": [
+    {
+      "name": "Mouse Gamer",
+      "quantity": 1
+    },
+    {
+      "name": "Teclado Mecânico",
+      "quantity": 1
+    }
+  ],
+  "status": "processing"
+}
+
+### Update Order
+PUT {{baseUrl}}/api/orders/65f7e1bbf9b2a4f1a9c38b9a3
+Content-Type: {{contentType}}
+
+{
+  "status": "shipped"
+}
+
+### Delete Order
+DELETE {{baseUrl}}/api/orders/65f7e1bbf9b2a4f1a9c38b9a3
+
+## ====== DELIVERIES ======
+
+### Get All Deliveries
+GET {{baseUrl}}/api/deliveries
+
+### Get Delivery by ID
+GET {{baseUrl}}/api/deliveries/65f7e1bbf9b2a4f1a9c38b9a4
+
+### Create Delivery
+POST {{baseUrl}}/api/deliveries
+Content-Type: {{contentType}}
+
+{
+  "orderId": "65f7e1bbf9b2a4f1a9c38b9a3",
+  "courierId": "65f7e1bbf9b2a4f1a9c38b9a5",
+  "status": "pending",
+  "pickupAddress": {
+    "street": "Av. Brasil, 1000",
+    "city": "Belo Horizonte",
+    "state": "MG"
+  },
+  "deliveryAddress": {
+    "street": "Rua das Flores, 200",
+    "city": "Contagem",
+    "state": "MG"
+  },
+  "estimatedDelivery": "2026-03-07T18:00:00Z"
+}
+
+### Update Delivery
+PUT {{baseUrl}}/api/deliveries/65f7e1bbf9b2a4f1a9c38b9a4
+Content-Type: {{contentType}}
+
+{
+  "status": "IN_TRANSIT"
+}
+
+### Delete Delivery
+DELETE {{baseUrl}}/api/deliveries/65f7e1bbf9b2a4f1a9c38b9a4
+
+## ====== DELIVERY EVENTS ======
+
+### Get All Delivery Events
+GET {{baseUrl}}/api/delivery-events
+
+### Get Delivery Event by ID
+GET {{baseUrl}}/api/delivery-events/65f7e1bbf9b2a4f1a9c38b9a6
+
+### Get Events by Delivery ID
+GET {{baseUrl}}/api/delivery-events/delivery/65f7e1bbf9b2a4f1a9c38b9a4
+
+### Get Events by Order ID (Delivery History)
+GET {{baseUrl}}/api/delivery-events/order/65f7e1bbf9b2a4f1a9c38b9a3
+
+### Get Latest Status of Delivery
+GET {{baseUrl}}/api/delivery-events/latest/65f7e1bbf9b2a4f1a9c38b9a4
+
+### Create Delivery Event
+POST {{baseUrl}}/api/delivery-events
+Content-Type: {{contentType}}
+
+{
+  "deliveryId": "65f7e1bbf9b2a4f1a9c38b9a4",
+  "orderId": "65f7e1bbf9b2a4f1a9c38b9a3",
+  "eventType": "OUT_FOR_DELIVERY",
+  "timestamp": "2026-03-07T15:00:00Z",
+  "actor": {
+    "type": "courier",
+    "id": "65f7e1bbf9b2a4f1a9c38b9a5"
+  }
+}
+
+## ====== SCALAR & AGGREGATOR ======
+
+### Open Scalar UI (abra no navegador)
+GET {{baseUrl}}/scalar/
+
+### List aggregator services
+GET {{baseUrl}}/api/swagger/services
+
+### Get aggregated specs (JSON por serviço)
+GET {{baseUrl}}/api/swagger/specs

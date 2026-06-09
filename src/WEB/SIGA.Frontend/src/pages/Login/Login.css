@@ -1,0 +1,130 @@
+﻿.login-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 32px;
+  background: linear-gradient(135deg, #f4f7fb 0%, #e8eef8 100%);
+}
+
+.login-card {
+  width: 100%;
+  max-width: 980px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  overflow: hidden;
+  border-radius: 28px;
+  background: #ffffff;
+  box-shadow: 0 24px 70px rgba(20, 43, 85, 0.14);
+}
+
+.login-brand {
+  padding: 56px;
+  color: #ffffff;
+  background: linear-gradient(160deg, #163c70 0%, #235ca8 100%);
+}
+
+.login-logo {
+  width: 140px;
+  margin-bottom: 40px;
+}
+
+.login-brand h1 {
+  margin: 0 0 16px;
+  font-size: 36px;
+  line-height: 1.1;
+}
+
+.login-brand p {
+  margin: 0;
+  max-width: 360px;
+  font-size: 17px;
+  line-height: 1.6;
+  opacity: 0.92;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  padding: 56px;
+}
+
+.login-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  color: #24364f;
+  font-weight: 600;
+}
+
+.login-form input {
+  height: 48px;
+  border: 1px solid #d6dfec;
+  border-radius: 12px;
+  padding: 0 14px;
+  font-size: 15px;
+  outline: none;
+}
+
+.login-form input:focus {
+  border-color: #235ca8;
+  box-shadow: 0 0 0 3px rgba(35, 92, 168, 0.12);
+}
+
+.login-message {
+  margin: 0;
+  color: #c2410c;
+  font-size: 14px;
+}
+
+.login-form > button[type="submit"] {
+  height: 50px;
+  border: none;
+  border-radius: 14px;
+  background: #235ca8;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.login-form > button[type="submit"]:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.login-register-text {
+  margin: -4px 0 0;
+  color: #52657f;
+  font-size: 14px;
+  text-align: center;
+}
+
+.login-register-text button {
+  border: none;
+  background: transparent;
+  color: #235ca8;
+  font-weight: 700;
+  cursor: pointer;
+  padding: 0;
+}
+
+.login-register-text button:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 820px) {
+  .login-card {
+    grid-template-columns: 1fr;
+  }
+
+  .login-brand,
+  .login-form {
+    padding: 36px;
+  }
+
+  .login-brand h1 {
+    font-size: 30px;
+  }
+}

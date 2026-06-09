@@ -1,0 +1,36 @@
+# Visual Studio
+.vs/
+[Dd]ebug/
+[Rr]elease/
+**/bin/
+**/obj/
+*.suo
+
+# Indexação e Copilot
+CopilotIndices/
+FileContentIndex/
+GeneratedMSInternal/
+
+# User-specific files
+
+# Environment variables
+.env
+.env.*
+!.env.example
+**/.env
+**/.env.*
+!**/.env.example
+/src/API/SIGA.Delivery/src/SIGA.Delivery.API/SIGA.Delivery.Api.csproj.lscache
+/src/API/SIGA.Delivery/src/SIGA.Delivery.Application/SIGA.Delivery.Application.csproj.lscache
+/src/API/SIGA.Delivery/src/SIGA.Delivery.Domain/SIGA.Delivery.Domain.csproj.lscache
+/src/API/SIGA.Delivery/src/SIGA.Delivery.Infra.Data/SIGA.Delivery.Infra.Data.csproj.lscache
+/src/API/SIGA.Delivery/src/SIGA.Delivery.Infra.IoC/SIGA.Delivery.Infra.IoC.csproj.lscache
+/src/API/SIGA.Gateway/src/SIGA.Gateway.API/SIGA.Gateway.API.csproj.lscache
+/src/API/SIGA.Gateway/src/SIGA.Gateway.Application/SIGA.Gateway.Application.csproj.lscache
+/src/API/SIGA.Gateway/src/SIGA.Gateway.Domain/SIGA.Gateway.Domain.csproj.lscache
+/src/API/SIGA.Gateway/src/Siga.Gateway.Infra.Data/SIGA.Gateway.Infra.Data.csproj.lscache
+/src/API/SIGA.Gateway/src/Siga.Gateway.Infra.IoC/SIGA.Gateway.Infra.IoC.csproj.lscache
+/src/API/SIGA.Order/src/SIGA.Order.API/SIGA.Order.API.csproj.lscache
+/src/API/SIGA.Order/src/SIGA.Order.Application/SIGA.Order.Application.csproj.lscache
+/src/API/SIGA.Order/src/SIGA.Order.Infra.IoC/SIGA.Order.Infra.IoC.csproj.lscache
+/src/API/SIGA.User/src/SIGA.User.Application/SIGA.User.Application.csproj.lscache

@@ -1,0 +1,19 @@
+<Solution>
+  <Project Path="src/SIGA.User.API/SIGA.User.API.csproj">
+    <BuildDependency Project="src/SIGA.User.Domain/SIGA.User.Domain.csproj" />
+    <BuildDependency Project="src/SIGA.User.Infra.IoC/SIGA.User.Infra.IoC.csproj" />
+  </Project>
+  <Project Path="src/SIGA.User.Application/SIGA.User.Application.csproj">
+    <BuildDependency Project="src/SIGA.User.Domain/SIGA.User.Domain.csproj" />
+  </Project>
+  <Project Path="src/SIGA.User.Domain/SIGA.User.Domain.csproj" />
+  <Project Path="src/SIGA.User.Infra.Data/SIGA.User.Infra.Data.csproj">
+    <BuildDependency Project="src/SIGA.User.Domain/SIGA.User.Domain.csproj" />
+  </Project>
+  <Project Path="src/SIGA.User.Infra.IoC/SIGA.User.Infra.IoC.csproj">
+    <BuildDependency Project="src/SIGA.User.Application/SIGA.User.Application.csproj" />
+    <BuildDependency Project="src/SIGA.User.Domain/SIGA.User.Domain.csproj" />
+    <BuildDependency Project="src/SIGA.User.Infra.Data/SIGA.User.Infra.Data.csproj" />
+  </Project>
+  <Project Path="src/Siga.User.Tests/SIGA.User.Tests.csproj" Id="f38126fc-44f3-4245-90ba-312fa3d7f71d" />
+</Solution>

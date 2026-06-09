@@ -1,0 +1,238 @@
+.admin-company-page {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.admin-company-title-row {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 18px;
+}
+
+.admin-company-subtitle {
+    color: #163f6e;
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.admin-company-title-row h1 {
+    margin: 8px 0 0;
+    color: #111827;
+    font-size: 34px;
+}
+
+.admin-company-title-row p {
+    margin: 8px 0 0;
+    color: #64748b;
+    font-size: 15px;
+}
+
+.admin-company-secondary-button {
+    border: 1px solid #163f6e;
+    border-radius: 12px;
+    padding: 13px 18px;
+    background: #ffffff;
+    color: #163f6e;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+.admin-company-secondary-button:hover {
+    background: #163f6e;
+    color: #ffffff;
+}
+
+.admin-company-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 18px;
+    border-radius: 18px;
+    background: #ffffff;
+    border: 1px solid #d7dee8;
+    box-shadow: 0 10px 24px rgba(15, 23, 42, 0.06);
+}
+
+.admin-company-actions button {
+    border: 1px solid #cbd5e1;
+    border-radius: 10px;
+    padding: 10px 14px;
+    background: #f8fafc;
+    color: #64748b;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+.admin-company-actions button:hover:not(:disabled) {
+    border-color: #1f7fd3;
+    background: #ffffff;
+    color: #163f6e;
+}
+
+.admin-company-actions button:disabled {
+    opacity: 0.55;
+    cursor: not-allowed;
+}
+
+.admin-company-filters {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 240px;
+    gap: 16px;
+    padding: 20px;
+    border: 1px solid #d7dee8;
+    border-radius: 18px;
+    background: #ffffff;
+    box-shadow: 0 10px 24px rgba(15, 23, 42, 0.06);
+}
+
+.admin-company-filters label {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.admin-company-filters span {
+    color: #263445;
+    font-size: 14px;
+    font-weight: 800;
+}
+
+.admin-company-filters input,
+.admin-company-filters select {
+    height: 44px;
+    border: 1px solid #c5ced8;
+    border-radius: 10px;
+    padding: 0 12px;
+    background: #ffffff;
+    color: #172033;
+    font-size: 14px;
+    outline: none;
+}
+
+.admin-company-alert,
+.admin-company-loading,
+.admin-company-empty {
+    padding: 16px;
+    border-radius: 14px;
+    background: #ffffff;
+    border: 1px solid #d7dee8;
+    color: #526070;
+    font-weight: 700;
+}
+
+.admin-company-alert {
+    color: #c2410c;
+    background: #fff7ed;
+    border-color: #fed7aa;
+}
+
+.admin-company-panel {
+    background: #ffffff;
+    border: 1px solid #d7dee8;
+    border-radius: 18px;
+    box-shadow: 0 10px 24px rgba(15, 23, 42, 0.06);
+    overflow: hidden;
+}
+
+.admin-company-panel-header {
+    padding: 22px 24px;
+    border-bottom: 1px solid #edf2f7;
+}
+
+.admin-company-panel-header h2 {
+    margin: 0;
+    color: #111827;
+    font-size: 22px;
+}
+
+.admin-company-panel-header p {
+    margin: 6px 0 0;
+    color: #64748b;
+    font-size: 14px;
+}
+
+.admin-company-table-head,
+.admin-company-table-row {
+    display: grid;
+    grid-template-columns: 1.35fr 1.1fr 150px 120px 150px 110px;
+    gap: 14px;
+    align-items: center;
+    padding: 16px 24px;
+}
+
+.admin-company-table-head {
+    background: #f8fafc;
+    color: #526070;
+    font-size: 13px;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.admin-company-table-row {
+    border-top: 1px solid #edf2f7;
+    color: #172033;
+    font-size: 14px;
+}
+
+.admin-company-order-id {
+    color: #64748b;
+    font-size: 13px;
+    word-break: break-all;
+}
+
+.admin-company-status-badge {
+    width: fit-content;
+    border-radius: 999px;
+    padding: 7px 12px;
+    background: #e0f2fe;
+    color: #075985;
+    font-weight: 800;
+}
+
+.admin-company-table-row button {
+    border: 1px solid #cbd5e1;
+    border-radius: 10px;
+    padding: 9px 12px;
+    background: #f8fafc;
+    color: #475569;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.admin-company-table-row button:hover {
+    border-color: #1f7fd3;
+    background: #ffffff;
+    color: #163f6e;
+    box-shadow: 0 8px 18px rgba(15, 23, 42, 0.08);
+    transform: translateY(-1px);
+}
+
+@media (max-width: 1180px) {
+    .admin-company-table-head {
+        display: none;
+    }
+
+    .admin-company-table-row {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 720px) {
+    .admin-company-title-row {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .admin-company-secondary-button {
+        width: 100%;
+    }
+
+    .admin-company-filters {
+        grid-template-columns: 1fr;
+    }
+}
